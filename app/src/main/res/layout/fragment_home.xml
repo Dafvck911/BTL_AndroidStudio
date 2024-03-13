@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ViewFlipper
+        android:id="@+id/viewflipermh"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+    </ViewFlipper>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/content_frame1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Danh sách phòng"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleview1"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="my_prim">#5E35B1</color>
+    <color name="my_second">#673AB7</color>
+    <color name="my_screen">#9466E6</color>
+    <color name="red_prim">#AF2B3F</color>
+    <color name="my_main_color">#8E37C3</color>
+</resources>

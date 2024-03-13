@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1087636760023",
+    "project_id": "modulelogin-9742e",
+    "storage_bucket": "modulelogin-9742e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087636760023:android:2fee6da99b54526a4fd792",
+        "android_client_info": {
+          "package_name": "com.example.pickroom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHgDqMaJ-QphfMQbB8g9JPllqCg7Zrw5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087636760023:android:ecb001ee2ce894bb4fd792",
+        "android_client_info": {
+          "package_name": "com.example.signup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHgDqMaJ-QphfMQbB8g9JPllqCg7Zrw5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

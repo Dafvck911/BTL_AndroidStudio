@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dangnhap_Activity"
+    android:background="@drawable/login1" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@color/my_prim"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="PICK ROOM"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="-20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký"
+                android:textColor="@color/my_prim"
+                android:textSize="32sp"
+                android:textStyle="bold"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Vui lòng nhập thông tin đăng ký"
+                android:alpha="0.7"></TextView>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"></View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên đăng nhập"
+                android:alpha="0.7"
+                android:textStyle="bold"></TextView>
+            <EditText
+                android:id="@+id/username1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                ></EditText>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"></View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mật khẩu"
+                android:alpha="0.7"
+                android:textStyle="bold"></TextView>
+            <EditText
+                android:id="@+id/password1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"></EditText>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"></View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số điện thoại"
+                android:alpha="0.7"
+                android:textStyle="bold"></TextView>
+            <EditText
+                android:id="@+id/phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"></EditText>
+
+
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"></View>
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:visibility="gone"
+                android:layout_marginLeft="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btDangky"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Đăng ký"
+                app:cornerRadius="32dp"></com.google.android.material.button.MaterialButton>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"></View>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

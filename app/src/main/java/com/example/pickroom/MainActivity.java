@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         replaceFragment(new Home_Fragment());
         navigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
 
+
 //        firebaseUser = firebaseAuth.getCurrentUser();
 //        View headerView = navigationView.getHeaderView(0);
 //        TextView userEmail = headerView.findViewById(R.id.email);

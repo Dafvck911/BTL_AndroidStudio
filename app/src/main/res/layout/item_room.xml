@@ -14,16 +14,16 @@
 
         <ImageView
             android:id="@+id/phong1"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:src="@drawable/phong1"
             android:scaleType="fitXY"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NAME"
-            android:layout_marginLeft="15dp"
-            android:textSize="23dp"
+            android:layout_marginLeft="13dp"
+            android:textSize="18sp"
             android:textColor="#7845D5"
             android:textStyle="bold"
             android:layout_toRightOf="@id/phong1"
@@ -33,51 +33,58 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Giá"
-
-            android:layout_marginLeft="12dp"
-            android:textSize="20dp"
+            android:layout_marginLeft="13dp"
+            android:textSize="14sp"
             android:textStyle="normal"
             android:textColor="#DF3030"
             android:layout_toRightOf="@id/phong1"
-            android:layout_below="@id/name"/>
+            android:layout_below="@id/name"
+            android:drawableStart="@drawable/money_item"
+            android:drawableTint="#DF3030"/>
 
         <TextView
             android:id="@+id/diachi1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/gia"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="4dp"
             android:layout_toRightOf="@id/phong1"
             android:text="Địa chỉ"
             android:textColor="#63419F"
-            android:textSize="20dp"
-            android:textStyle="normal" />
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:drawableStart="@drawable/location_item"
+            android:drawableTint="@color/my_prim"/>
 
         <TextView
             android:id="@+id/dientich"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/diachi1"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="8dp"
             android:layout_toRightOf="@id/phong1"
             android:text="Diện tích"
             android:textColor="#63419F"
-            android:textSize="20dp"
-            android:textStyle="normal" />
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:drawableStart="@drawable/dientich_item"
+            android:drawableTint="@color/my_prim"/>
 
         <TextView
             android:id="@+id/songuoi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/dientich"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="7dp"
             android:layout_toRightOf="@id/phong1"
             android:text="Số người"
             android:textColor="#63419F"
-            android:textSize="20dp"
-            android:textStyle="normal"/>
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:drawableStart="@drawable/nguoi_item"
+            android:drawableTint="@color/my_prim" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

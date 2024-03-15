@@ -45,4 +45,6 @@ dependencies {
 
     //glider
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+    //roundedImage
+    implementation ("com.makeramen:roundedimageview:2.3.0")
 }

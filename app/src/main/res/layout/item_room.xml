@@ -6,18 +6,21 @@
     android:layout_marginTop="10dp"
     app:cardCornerRadius="9dp"
     android:id="@+id/cardview"
-    android:layout_marginEnd="5dp">
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="15dp"
+    app:cardElevation="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/phong1"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:src="@drawable/phong1"
-            android:scaleType="fitXY"/>
+            android:scaleType="fitXY"
+            app:riv_corner_radius="9dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

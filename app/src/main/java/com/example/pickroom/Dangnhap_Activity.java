@@ -91,7 +91,6 @@ public class Dangnhap_Activity extends AppCompatActivity {
 
                                     } else {
                                         // If sign in fails, display a message to the user.
-
                                         Toast.makeText(Dangnhap_Activity.this, "Sai tài khoản hoặc mật khẩu!",
                                                 Toast.LENGTH_SHORT).show();
                                     }

@@ -7,6 +7,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -26,6 +27,7 @@ public class Dangky_Activity extends AppCompatActivity {
     EditText pass1;
     EditText sdt;
     MaterialButton dky;
+    TextView txttaikhoan;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
 
@@ -47,6 +49,15 @@ public class Dangky_Activity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         setupUI();
         setupListener();
+
+        txttaikhoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Dangnhap_Activity.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 
     private void setupUI(){
@@ -55,6 +66,8 @@ public class Dangky_Activity extends AppCompatActivity {
         sdt = (EditText) findViewById(R.id.phonenumber);
         dky = (MaterialButton) findViewById(R.id.btDangky);
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
+        txttaikhoan = (TextView) findViewById(R.id.txtcotaikhoan);
+
     }
 
     boolean isEmpty(EditText text){

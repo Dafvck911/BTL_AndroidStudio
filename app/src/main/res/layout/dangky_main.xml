@@ -40,7 +40,7 @@
                 android:text="PICK ROOM"
                 android:textColor="@color/white"
                 android:textSize="32dp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
         </LinearLayout>
 
     </RelativeLayout>
@@ -63,65 +63,65 @@
                 android:text="Đăng ký"
                 android:textColor="@color/my_prim"
                 android:textSize="32sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16dp"
                 android:text="Vui lòng nhập thông tin đăng ký"
-                android:alpha="0.7"></TextView>
+                android:alpha="0.6"
+                android:textStyle="bold"/>
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"></View>
+                android:layout_height="30dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="E-mail"
                 android:alpha="0.7"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"
+                android:textSize="16sp"/>
             <EditText
                 android:id="@+id/username1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                ></EditText>
+                android:inputType="text"/>
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"></View>
+                android:layout_height="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mật khẩu"
                 android:alpha="0.7"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"
+                android:textSize="16sp"/>
             <EditText
                 android:id="@+id/password1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"></EditText>
+                android:inputType="textPassword"/>
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"></View>
+                android:layout_height="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Số điện thoại"
                 android:alpha="0.7"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"
+                android:textSize="16sp"/>
             <EditText
                 android:id="@+id/phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="phone"></EditText>
-
-
-
+                android:inputType="phone"/>
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"></View>
+                android:layout_height="20dp"/>
 
             <ProgressBar
                 android:id="@+id/progressbar"
@@ -135,13 +135,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Đăng ký"
-                app:cornerRadius="32dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="32dp"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/txtcotaikhoan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tôi đã có tài khoản!"
+                android:textSize="20dp"
+                android:alpha="0.7"
+                android:layout_gravity="center"/>
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="10dp"></View>
-
-
+                android:layout_height="10dp"/>
 
         </LinearLayout>
 

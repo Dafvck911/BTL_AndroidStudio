@@ -4,22 +4,27 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder>{
+public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder> implements Filterable {
 
     private Context context;
     private List<Room> listroom;
+    private List<Room> listroomOld;
 
     public RoomAdapter(Context context, List<Room> list) {
         this.context = context;
         this.listroom = list;
+        this.listroomOld = list;
     }
 
     @NonNull
@@ -70,5 +75,38 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
             tvdientich = itemView.findViewById(R.id.dientich);
             tvsonguoi = itemView.findViewById(R.id.songuoi);
         }
+    }
+
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                String strsearch = constraint.toString();
+                if (strsearch.isEmpty()){
+                    listroom = listroomOld;
+                }else {
+                    List<Room> list = new ArrayList<>();
+                    for (Room room : listroomOld){
+                        if (room.getDiachi().toLowerCase().contains(strsearch.toLowerCase())){
+                            list.add(room);
+                        }
+                    }
+
+                    listroom = list;
+                }
+
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = listroom;
+
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                listroom = (List<Room>) results.values;
+                notifyDataSetChanged();
+            }
+        };
     }
 }

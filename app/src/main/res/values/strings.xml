@@ -15,4 +15,6 @@
 
     <string name="navi_draw_open">Open navi</string>
     <string name="navi_draw_close">Close navi</string>
+
+    <string name="action_search">Tìm kiếm</string>
 </resources>

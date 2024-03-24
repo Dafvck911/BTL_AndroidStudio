@@ -1,6 +1,8 @@
 package com.example.pickroom;
 
-public class Room {
+import java.io.Serializable;
+
+public class Room implements Serializable {
     private String diachi;
     private String giathue;
     private String dientich;

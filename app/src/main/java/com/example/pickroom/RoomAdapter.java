@@ -1,6 +1,8 @@
 package com.example.pickroom;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -17,7 +20,7 @@ import java.util.List;
 
 public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder> implements Filterable {
 
-    private Context context;
+    private Context context;// biến môi trường
     private List<Room> listroom;
     private List<Room> listroomOld;
 
@@ -47,6 +50,25 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
         holder.tvdientich.setText(room.getDientich());
         holder.tvsonguoi.setText(room.getSonguoi());
 
+        holder.cardViewItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickGotoDetail(room);
+            }
+        });
+
+    }
+
+    private  void onClickGotoDetail(Room room){
+        Intent i = new Intent(context, DetailActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("object_room", room);
+        i.putExtras(bundle);
+        context.startActivity(i);
+    }
+
+    public  void release(){//giải phóng biến môi trường
+        context = null;
     }
 
     @Override
@@ -65,6 +87,7 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
         private TextView tvdiachi;
         private TextView tvdientich;
         private TextView tvsonguoi;
+        private CardView cardViewItem;
         public RoomViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -74,6 +97,8 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
             tvdiachi = itemView.findViewById(R.id.diachi1);
             tvdientich = itemView.findViewById(R.id.dientich);
             tvsonguoi = itemView.findViewById(R.id.songuoi);
+
+            cardViewItem = itemView.findViewById(R.id.cardview);
         }
     }
 

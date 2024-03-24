@@ -128,4 +128,12 @@ public class Home_Fragment extends Fragment {
             }
         });
     }
+
+    @Override
+    public void onDestroy() {//giải phóng biến môi trường context
+        super.onDestroy();
+        if (roomAdapter!= null){
+            roomAdapter.release();
+        }
+    }
 }
